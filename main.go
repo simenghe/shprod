@@ -36,7 +36,9 @@ func main() {
 	// Group of inventory routes.
 	r.Get("/inventory", HandleGetInventory)
 	r.Post("/inventory", HandlePostInventory)
-	r.Patch("/inventory", HandlePatchInventory)
+
+	// Replace
+	r.Put("/inventory", HandlePutInventory)
 	r.Delete("/inventory", HandleDeleteInventory)
 
 	fmt.Println("Starting server at PORT :", port)
